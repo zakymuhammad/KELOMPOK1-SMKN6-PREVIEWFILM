@@ -1,49 +1,29 @@
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
 import "./index.css";
+// import "./App.css";
 
 function App() {
   const [count, setCount] = useState(0);
 
   return (
     <div className="App">
-      <div className="navbar bg-base-100">
-        <div className="flex-1">
-          <a className="btn btn-ghost normal-case text-xl">daisyUI</a>
+      <header className="App-header">
+        <h1 className="font-bold text-4xl flex justify-center mb-7">
+          Movie Web
+        </h1>
+        <input
+          placeholder="Cari film kesayangan ..."
+          className="movie-search"
+        />
+        <div className="movie-container">
+          <div className="movie-wrapper">
+            <div className="movie-title">Contoh 1</div>
+            <img className="movie-image" />
+            <div className="movie-date">23-12-1233</div>
+            <div className="movie-rate">7.6</div>
+          </div>
         </div>
-        <div className="flex-none">
-          <ul className="menu menu-horizontal px-1">
-            <li>
-              <a>Item 1</a>
-            </li>
-            <li tabIndex={0}>
-              <a>
-                Parent
-                <svg
-                  className="fill-current"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
-                </svg>
-              </a>
-              <ul className="p-2 bg-base-100">
-                <li>
-                  <a>Submenu 1</a>
-                </li>
-                <li>
-                  <a>Submenu 2</a>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <a>Item 3</a>
-            </li>
-          </ul>
-        </div>
-      </div>
+      </header>
     </div>
   );
 }
