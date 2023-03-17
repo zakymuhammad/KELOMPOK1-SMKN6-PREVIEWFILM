@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 .App {
     text-align: center;
 }
@@ -19,13 +18,13 @@
 }
 
 .movie-container {
-    @apply w-full flex justify-center items-center gap-5; 
+    @apply w-full flex justify-center items-center gap-5 
   }
 
 .movie-wrapper {
-    @apply w-[80%] bg-slate-300 text-slate-700;
+    @apply w-[80%] bg-slate-300 bg-slate-700
 }
 
 .movie-search {
-    @apply p-4 h-12 text-2xl mb-8 font-semibold rounded-lg;
+    @apply p-4 h-12 text-xl mb-6 font-semibold rounded-lg w-[250px]
 }
