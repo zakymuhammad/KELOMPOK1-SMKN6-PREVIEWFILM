@@ -18,13 +18,22 @@
 }
 
 .movie-container {
-    @apply w-full flex justify-center items-center gap-5 
+    @apply w-full flex justify-center items-center gap-5;
+    flex-wrap: wrap;
   }
 
 .movie-wrapper {
-    @apply w-[80%] bg-slate-300 bg-slate-700
+    @apply w-[350px] bg-pink-700;
 }
 
 .movie-search {
-    @apply p-4 h-12 text-xl mb-6 font-semibold rounded-lg w-[250px]
+    @apply p-4 h-12  text-black text-xl mb-6 font-semibold rounded-lg w-[250px];
+}
+
+.movie-title {
+    @apply h-16 flex justify-center items-center font-semibold;
+}
+
+.movie-date {
+    @apply italic
 }
