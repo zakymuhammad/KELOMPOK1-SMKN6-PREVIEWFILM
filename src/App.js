@@ -3,6 +3,11 @@ import "./index.css";
 import { useEffect, useState } from "react";
 import { getMovieList, searchMovie } from "./api";
 
+const Logout=()=>{
+  localStorage.removeItem("signUp")
+  window.location.reload()
+}
+
 const App = () => {
   const [popularMovies, setPopularMovies] = useState([]);
 
@@ -43,6 +48,7 @@ const App = () => {
         <h1 className="font-bold text-4xl flex justify-center mb-7">
           Movie Web
         </h1>
+        <button onClick={Logout} className="bg-pink-700 flex justify-center items-center">Logout</button>
         <input
           placeholder="Cari film kesayangan . . ."
           className="movie-search"
