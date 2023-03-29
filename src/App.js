@@ -3,10 +3,11 @@ import "./index.css";
 import { useEffect, useState } from "react";
 import { getMovieList, searchMovie } from "./api";
 
-const Logout=()=>{
-  localStorage.removeItem("signUp")
-  window.location.reload()
-}
+// ini merupakan system untuk logout dari beranda.
+const Logout = () => {
+  localStorage.removeItem("signUp");
+  window.location.reload();
+};
 
 const App = () => {
   const [popularMovies, setPopularMovies] = useState([]);
@@ -17,20 +18,55 @@ const App = () => {
     });
   }, []);
 
+  // Mengambil 20 list Film terpopuler "update realtime", yang di sediakan API
   const PopularMovieList = () => {
     return popularMovies.map((movie, i) => {
       return (
         <div className="movie-wrapper" key={i}>
-          <div className="movie-title">{movie.title}</div>
           <img
             className="movie-image"
             src={`${process.env.REACT_APP_BASEIMGURL}/${movie.poster_path}`}
           />
-          <div className="movie-date">{movie.release_date}</div>
-          <div className="movie-rate">{movie.vote_average}</div>
         </div>
       );
     });
+  };
+
+  // Navigation Bar
+  const Navigation = () => {
+    return (
+      <nav className="flex items-center grid grid-cols-5 grid-rows-1 gap-5 w-full h-24 px-10 mb-10 bg-white bg-opacity-20">
+        <h1 className="font-bold text-4xl flex justify-start text-sky-400">
+          <span className="text-white">Movie</span> Web
+        </h1>
+
+        <ul className="text-white flex justify-center col-start-2 col-end-4 space-x-7">
+          <li>HOME</li>
+          <li>ABOUT</li>
+          <li>PRODUCT</li>
+          <li>COPYRIGHT</li>
+        </ul>
+
+        <div className="tab-search">
+          <input
+            placeholder="Search . . ."
+            className="movie-search"
+            onChange={({ target }) => search(target.value)}
+          />
+        </div>
+
+        <ul className="text-white flex flex-wrap justify-end col-start-5 col-end-6 space-x-3">
+          <li>
+            <button
+              onClick={Logout}
+              className="bg-pink-700 py-2 px-5 font-semibold rounded-lg"
+            >
+              Logout
+            </button>
+          </li>
+        </ul>
+      </nav>
+    );
   };
 
   const search = async (q) => {
@@ -44,16 +80,8 @@ const App = () => {
 
   return (
     <div className="App">
+      <Navigation />
       <header className="App-header">
-        <h1 className="font-bold text-4xl flex justify-center mb-7">
-          Movie Web
-        </h1>
-        <button onClick={Logout} className="bg-pink-700 flex justify-center items-center">Logout</button>
-        <input
-          placeholder="Cari film kesayangan . . ."
-          className="movie-search"
-          onChange={({ target }) => search(target.value)}
-        />
         <div className="movie-container">
           <PopularMovieList />
         </div>

@@ -1,9 +1,3 @@
-*{
-    text-align: center;
-    background-color: #282c34;
-}
-
-
 .container{
     text-align: center;
     padding: 40px 30px 40px 30px;
@@ -13,29 +7,4 @@
     background-color: white;
     border-radius: 25px;
     margin-top: 100px;
-}
-
-h1{
-    background-color: rgba(255, 255, 255, 0);
-    margin-bottom: 20px;
-}
-
-input{
-    text-align: left;
-    width: 300px;
-    height: 35px;
-    color: black;
-    margin-bottom: 15px;
-    background-color: rgba(255, 255, 255, 0);
-    border-bottom: 1px solid black;
-    outline: none;
-}
-
-button{
-    margin-top: 25px;
-    height: 40px;
-    width: 170px;
-    background-color: aqua;
-    border: none;
-    border-radius: 15px;
 }

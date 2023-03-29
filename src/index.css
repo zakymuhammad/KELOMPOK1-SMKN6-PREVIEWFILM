@@ -2,38 +2,58 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+    @apply bg-slate-700 text-white
+}
+
 .App {
     text-align: center;
 }
 
 .App-header {
-    background-color: #282c34;
+    /* background-color: #282c34;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     font-size: calc(10px + 2vmin);
-    color: white;
+    color: white; */
 }
 
 .movie-container {
-    @apply w-full flex justify-center items-center gap-5;
+    @apply w-full flex justify-center mb-10 items-center gap-5;
     flex-wrap: wrap;
   }
 
 .movie-wrapper {
-    @apply w-[350px] bg-pink-700;
+    @apply w-[250px] bg-slate-400 bg-opacity-25 rounded-lg
 }
 
 .movie-search {
-    @apply p-4 h-12  text-black text-xl mb-6 font-semibold rounded-lg w-[250px];
+    @apply p-2 h-auto text-black text-[15px] font-semibold rounded-lg w-[185px];
 }
 
 .movie-title {
-    @apply h-16 flex justify-center items-center font-semibold;
+    @apply h-16 flex justify-center items-center overflow-hidden font-semibold;
 }
 
 .movie-date {
     @apply italic
+}
+
+.movie-image {
+    @apply rounded-lg
+}
+
+.tab-search {
+    @apply flex justify-center
+}
+
+input {
+    @apply text-slate-900 align-baseline w-[300px] h-9 outline-none my-3 border-b-slate-900 border-b-[1px]
+}
+
+button .x {
+    @apply w-[170px] h-[40px] bg-sky-500 rounded-lg mt-10
 }
