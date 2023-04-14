@@ -3,6 +3,8 @@ import React, { useState, useEffect } from "react";
 import SwiperCore, { Autoplay } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 
+import Button, { OutlineButton } from "../button/Button";
+
 import tmdbApi, { category, movieType } from "../../api/tmbdApi";
 import apiConfig from "../../api/apiConfig";
 
@@ -23,7 +25,7 @@ const HeroSlide = () => {
         const response = await tmdbApi.getMoviesList(movieType.popular, {
           params,
         });
-        setMovieItems(response.results.slice(0, 3));
+        setMovieItems(response.results.slice(0, 10));
         console.log(response);
       } catch (error) {
         console.error(error);
@@ -73,15 +75,29 @@ const HeroSlideItem = (props) => {
 
   return (
     <div
-      className={`hero-slide_item ${props.className}`}
+      className={`hero-slide__item ${props.className}`}
       style={{ backgroundImage: `url(${background})` }}
     >
-      <div className="hero-slide_item_content container">
-        <div className="hero-slide_item_content__info">
+      <div className="hero-slide__item__content container">
+        <div className="hero-slide__item__content__info">
           <h2 className="title">{item.title}</h2>
           <div className="overview">{item.overview}</div>
+          <div className="btns">
+            <Button onClick={() => history.push("/movie/" + item.id)}>
+              Watch now
+            </Button>
+            <OutlineButton onClick={() => console.log("trailer")}>
+              Watch trailer
+            </OutlineButton>
+          </div>
         </div>
-        <div className="hero-slide_item_content__poster"></div>
+        <div className="hero-slide__item__content__poster">
+          <img
+            src={apiConfig.originalImage(item.poster_path)}
+            alt="img"
+            className="bg-contain"
+          />
+        </div>
       </div>
     </div>
   );
