@@ -1,22 +1,42 @@
+// import React from "react";
+
+// import { Route, Switch } from "react-router-dom";
+
+// import Home from "../pages/Home";
+// import Detail from "../pages/Detail";
+// import Catalog from "../pages/Catalog";
+
+// const Routes = () => {
+//   return (
+//     <Switch>
+//       <Route path="/:category/search/:keyword" component={Catalog} />
+
+//       <Route path="/:category/:id" component={Detail} />
+
+//       <Route path="/:category" component={Catalog} />
+
+//       <Route path="/" exact component={Home} />
+//     </Switch>
+//   );
+// };
+
+// export default Routes;
+
 import React from "react";
 
-// import Switch from "react-js-switch";
 import { Route, Switch } from "react-router-dom";
 
-import Home2 from "../pages/Home2";
-import Detail from "../pages/Detail";
+import Home from "../pages/Home";
 import Catalog from "../pages/Catalog";
+import Detail from "../pages/Detail";
 
 const Routes = () => {
   return (
     <Switch>
       <Route path="/:category/search/:keyword" component={Catalog} />
-
-      <Route path="/:category/id" component={Detail} />
-
+      <Route path="/:category/:id" component={Detail} />
       <Route path="/:category" component={Catalog} />
-
-      <Route path="/" exact component={Home2} />
+      <Route path="/" exact component={Home} />
     </Switch>
   );
 };

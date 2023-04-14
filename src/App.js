@@ -5,13 +5,12 @@ import "./index.css";
 
 import { BrowserRouter, Route } from "react-router-dom";
 
-// import Header from "./components/header/Header";
 import Header from "./components/header/Header";
 import Footer from "./components/footer/Footer";
 
 import Routes from "./config/Routes";
 
-export default function App() {
+function App() {
   return (
     <BrowserRouter>
       <Route
@@ -26,3 +25,5 @@ export default function App() {
     </BrowserRouter>
   );
 }
+
+export default App;
