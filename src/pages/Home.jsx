@@ -13,9 +13,9 @@ const Home = () => {
     <>
       <HeroSlide />
       <div className="container">
-        <div className="section mb-3">
-          <div className="section__header mb-2">
-            <h2>Trending Movies</h2>
+        <div className="section mb-10">
+          <div className="section__header mb-8">
+            <h2 className="text-3xl">Trending Movies</h2>
             <Link to="/movie">
               <OutlineButton className="small">View more</OutlineButton>
             </Link>
@@ -23,9 +23,9 @@ const Home = () => {
           <MovieList category={category.movie} type={movieType.popular} />
         </div>
 
-        <div className="section mb-3">
-          <div className="section__header mb-2">
-            <h2>Top Rated Movies</h2>
+        <div className="section mb-10">
+          <div className="section__header mb-8">
+            <h2 className="text-3xl">Top Rated Movies</h2>
             <Link to="/movie">
               <OutlineButton className="small">View more</OutlineButton>
             </Link>
@@ -33,9 +33,9 @@ const Home = () => {
           <MovieList category={category.movie} type={movieType.top_rated} />
         </div>
 
-        <div className="section mb-3">
-          <div className="section__header mb-2">
-            <h2>Trending TV</h2>
+        <div className="section mb-10">
+          <div className="section__header mb-8">
+            <h2 className="text-3xl">Trending TV</h2>
             <Link to="/tv">
               <OutlineButton className="small">View more</OutlineButton>
             </Link>
@@ -43,9 +43,9 @@ const Home = () => {
           <MovieList category={category.tv} type={tvType.popular} />
         </div>
 
-        <div className="section mb-3">
-          <div className="section__header mb-2">
-            <h2>Top Rated TV</h2>
+        <div className="section mb-10">
+          <div className="section__header mb-8">
+            <h2 className="text-3xl">Top Rated TV</h2>
             <Link to="/tv">
               <OutlineButton className="small">View more</OutlineButton>
             </Link>
