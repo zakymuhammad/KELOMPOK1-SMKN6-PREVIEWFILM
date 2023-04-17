@@ -51,7 +51,7 @@ const Header = () => {
       <div className="header__wrap container">
         <div className="logo">
           <img src={logo} alt="" />
-          <Link to="/">MovPreview</Link>
+          <Link to="/">Mov.プレビュー</Link>
         </div>
         <ul className="header__nav">
           {headerNav.map((e, i) => (
