@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router";
 
 import tmdbApi from "../../api/tmdbApi";
-import apiConfig from "../../api/apiConfig";
+import apiConfig from "../../api/apiConfig"
 
 import './detail.scss';
 
@@ -26,10 +26,10 @@ const Detail = () => {
       {
         item && (
           <>
-            <div className="banner" style={{backgroundImage: 'url($(apiConfig.originalImage(item.backdrop_path || item.poster_path)})'}}></div>
+            <div className="banner" style={{backgroundImage: `url(${apiConfig.originalImage(item.backdrop_path || item.poster_path)})`}}></div>
             <div className="container mb-3 movie-content">
               <div className="movie-content__poster">
-                <div className="movie-content__poster__img" style={{backgroundImage: 'url($(apiConfig.originalImage(item.poster_path || item.backdrop_path)})'}}></div>
+                <div className="movie-content__poster__img" style={{backgroundImage: `url(${apiConfig.originalImage(item.poster_path || item.backdrop_path)})`}}></div>
               </div>
               <div className="movie-content__info">
                   <h1 className="title">
