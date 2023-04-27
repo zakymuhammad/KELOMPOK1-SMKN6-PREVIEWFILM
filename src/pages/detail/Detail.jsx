@@ -2,11 +2,13 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router";
 
 import tmdbApi from "../../api/tmbdApi";
-import apiConfig from "../../api/apiConfig"
+import apiConfig from "../../api/apiConfig";
 
 import './detail.scss';
 import CastList from "./CastList";
 import VideoList from "./VideoList";
+
+import MovieList from '../../components/movie-list/MovieList';
 
 const Detail = () => {
 
@@ -55,6 +57,12 @@ const Detail = () => {
             <div className="container">
               <div className="mb-3 section">
                     <VideoList id={item.id}/>        
+              </div>
+              <div className="section-mb3">
+                <div className="section__headermb-2">
+                  <h2>Similar</h2>
+                </div>
+                <MovieList category={category} type="similar" id={item.id}/>
               </div>
             </div>
           </>
