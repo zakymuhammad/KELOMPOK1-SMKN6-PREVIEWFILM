@@ -5,6 +5,8 @@ import tmdbApi from "../../api/tmbdApi";
 import apiConfig from "../../api/apiConfig"
 
 import './detail.scss';
+import CastList from "./CastList";
+import VideoList from "./VideoList";
 
 const Detail = () => {
 
@@ -46,8 +48,13 @@ const Detail = () => {
                     <div className="section__header">
                       <h2>Casts</h2>
                     </div>
-                    {/* casts list */}
+                    <CastList id={item.id}/>
                   </div>
+                </div>
+            </div>
+            <div className="container">
+              <div className="mb-3 section">
+                    <VideoList id={item.id}/>        
               </div>
             </div>
           </>
