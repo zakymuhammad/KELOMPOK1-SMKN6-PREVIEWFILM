@@ -99,7 +99,7 @@ const HeroSlideItem = (props) => {
       className={`hero-slide__item ${props.className}`}
       style={{ backgroundImage: `url(${background})` }}
     >
-      <div className="hero-slide__item__content container">
+      <div className="container hero-slide__item__content">
         <div className="hero-slide__item__content__info">
           <h2 className="title">{item.title}</h2>
           <div className="overview">{item.overview}</div>
