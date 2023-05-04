@@ -49,7 +49,7 @@
             background-size: cover;
             background-repeat: no-repeat;
             border-radius: $border-radius;
-            padding-top: 165%;  
+            padding-top: 165%;
         }
     }
 
@@ -66,7 +66,7 @@
         & > * {
             margin-bottom: 2rem;
         }
-        
+
         .title {
             font-size: 4rem;
             line-height: 1;
@@ -74,7 +74,7 @@
 
         .genres {
             & > * ~ * {
-                margin-left: .5rem;
+                margin-left: 0.5rem;
             }
 
             &__item {
@@ -86,5 +86,32 @@
                 background-color: $body-bg;
             }
         }
+    }
+}
+
+.casts {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 2fr));
+    gap: 10px;
+
+    &__item {
+        &__img {
+            padding-top: 160px;
+            background-size: cover;
+            margin-bottom: 0.5rem;
+            border-radius: 50%;
+        }
+
+        &__name {
+            font-size: 0.8rem;
+        }
+    }
+}
+
+.video {
+    margin-bottom: 3rem;
+
+    &__title {
+        margin-bottom: 1.5rem;
     }
 }
