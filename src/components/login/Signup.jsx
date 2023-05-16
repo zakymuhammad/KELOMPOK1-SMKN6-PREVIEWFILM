@@ -2,7 +2,7 @@ import React from "react";
 import "./style.css";
 import { useHistory } from "react-router-dom";
 
-const Signin = () => {
+const Signup = () => {
   const navigate = useHistory();
 
   return (
@@ -10,14 +10,13 @@ const Signin = () => {
       <div className="card-form w-[450px] h-auto">
         <form action="" className="p-10">
           <h1 className="font-semibold text-4xl flex justify-center mb-10 text-white">
-            SignIn
+            SignUp
           </h1>
 
           <div className="mb-5">
             <input
               type="text"
-              id="email"
-              required
+              id="name"
               placeholder="Username"
               className="w-full p-2.5 rounded-md"
             />
@@ -25,16 +24,45 @@ const Signin = () => {
 
           <div className="mb-5">
             <input
+              type="email"
+              id="email"
+              placeholder="Email"
+              className="w-full p-2.5 rounded-md"
+            />
+          </div>
+
+          <div className="mb-5">
+            <input
+              type="number"
+              id="email"
+              placeholder="Phone number"
+              min={0}
+              className="w-full p-2.5 rounded-md active:appearance-none"
+            />
+          </div>
+
+          <div className="mb-5">
+            <input
               type="password"
               id="email"
-              required
               placeholder="Password"
               className="w-full p-2.5 rounded-md"
             />
           </div>
 
+          <div className="mb-5">
+            <textarea
+              name="text"
+              id="textarea"
+              className="w-full h-20 resize-none p-2.5 rounded-md"
+              cols="auto"
+              placeholder="Address"
+              rows="5"
+            ></textarea>
+          </div>
+
           <button
-            onClick={() => navigate.push("/")}
+            onClick={() => navigate.push("/signin")}
             className="text-white py-2.5 px-10 rounded-md bg-sky-700 hover:bg-sky-500 hover:ring-2 hover:ring-bg-sky-200 hover:text-slate-800 hover:font-bold"
           >
             submit
@@ -42,13 +70,12 @@ const Signin = () => {
 
           <div className="text-white">
             <span>
-              create new account,{" "}
+              already have account,{" "}
               <button
-                type="submit"
                 className="text-sky-400 hover:text-sky-300"
-                onClick={() => navigate.push("/signup")}
+                onClick={() => navigate.push("/signin")}
               >
-                SignUp
+                SignIn
               </button>
             </span>
           </div>
@@ -58,4 +85,4 @@ const Signin = () => {
   );
 };
 
-export default Signin;
+export default Signup;

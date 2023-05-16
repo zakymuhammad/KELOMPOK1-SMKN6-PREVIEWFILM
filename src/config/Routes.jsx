@@ -26,21 +26,21 @@ import React from "react";
 
 import { Route, Switch } from "react-router-dom";
 
-// import Signin from "../components/login/Signin";
 import Home from "../pages/Home";
 import Catalog from "../pages/Catalog";
 import Detail from "../pages/detail/Detail";
-
-// import Header from "../components/header/Header";
-// import Footer from "../components/footer/Footer";
+import Singin from "../components/login/Signin";
+import Singup from "../components/login/Signup";
 
 const Routes = () => {
   return (
     <Switch>
-      <Route path="/:category/search/:keyword" component={Catalog} />
-      <Route path="/:category/:id" component={Detail} />
-      <Route path="/:category" component={Catalog} />
       <Route path="/" exact component={Home} />
+      <Route path="/signin" component={Singin} />
+      <Route path="/signup" component={Singup} />
+      <Route path="/:category" component={Catalog} />
+      <Route path="/:category/:id" component={Detail} />
+      <Route path="/:category/search/:keyword" component={Catalog} />
     </Switch>
   );
 };
