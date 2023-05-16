@@ -17,9 +17,7 @@ function App() {
       <Route
         render={(props) => (
           <>
-            <Header />
             <Routes />
-            <Footer />
           </>
         )}
       />

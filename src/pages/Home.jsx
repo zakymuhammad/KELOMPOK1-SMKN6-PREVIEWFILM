@@ -2,6 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "../index.css";
 
+import Header from "../components/header/Header";
+import Footer from "../components/footer/Footer";
+
 import { OutlineButton } from "../components/button/Button";
 import HeroSlide from "../components/hero-slide/HeroSlide";
 import MovieList from "../components/movie-list/MovieList";
@@ -11,6 +14,7 @@ import { category, movieType, tvType } from "../api/tmbdApi";
 const Home = () => {
   return (
     <>
+      <Header />
       <HeroSlide />
       <div className="container">
         <div className="section mb-10">
@@ -53,6 +57,7 @@ const Home = () => {
           <MovieList category={category.tv} type={tvType.top_rated} />
         </div>
       </div>
+      <Footer />
     </>
   );
 };

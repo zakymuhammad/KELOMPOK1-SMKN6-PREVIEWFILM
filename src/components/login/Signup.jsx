@@ -62,7 +62,7 @@ const Signup = () => {
           </div>
 
           <button
-            onClick={() => navigate.push("/signin")}
+            onClick={() => navigate.push("/")}
             className="text-white py-2.5 px-10 rounded-md bg-sky-700 hover:bg-sky-500 hover:ring-2 hover:ring-bg-sky-200 hover:text-slate-800 hover:font-bold"
           >
             submit
@@ -73,7 +73,7 @@ const Signup = () => {
               already have account,{" "}
               <button
                 className="text-sky-400 hover:text-sky-300"
-                onClick={() => navigate.push("/signin")}
+                onClick={() => navigate.push("/")}
               >
                 SignIn
               </button>

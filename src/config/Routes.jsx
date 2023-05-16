@@ -35,9 +35,9 @@ import Singup from "../components/login/Signup";
 const Routes = () => {
   return (
     <Switch>
-      <Route path="/" exact component={Home} />
-      <Route path="/signin" component={Singin} />
+      <Route path="/" exact component={Singin} />
       <Route path="/signup" component={Singup} />
+      <Route path="/home" component={Home} />
       <Route path="/:category" component={Catalog} />
       <Route path="/:category/:id" component={Detail} />
       <Route path="/:category/search/:keyword" component={Catalog} />
