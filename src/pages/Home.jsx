@@ -8,9 +8,13 @@ import MovieList from "../components/movie-list/MovieList";
 
 import { category, movieType, tvType } from "../api/tmbdApi";
 
+import Header from "../components/header/Header";
+import Footer from "../components/footer/Footer";
+
 const Home = () => {
   return (
     <>
+      <Header />
       <HeroSlide />
       <div className="container">
         <div className="section mb-10">
@@ -53,6 +57,7 @@ const Home = () => {
           <MovieList category={category.tv} type={tvType.top_rated} />
         </div>
       </div>
+      <Footer />
     </>
   );
 };

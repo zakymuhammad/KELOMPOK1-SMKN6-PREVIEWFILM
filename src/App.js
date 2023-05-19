@@ -16,9 +16,9 @@ function App() {
       <Route
         render={(props) => (
           <>
-            <Header {...props} />
+            {/* <Header {...props} /> */}
             <Routes />
-            <Footer />
+            {/* <Footer /> */}
           </>
         )}
       />

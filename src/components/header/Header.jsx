@@ -11,7 +11,7 @@ import { useRef } from "react";
 const headerNav = [
   {
     display: "Home",
-    path: "/",
+    path: "/home",
   },
   {
     display: "Movies",
@@ -20,6 +20,10 @@ const headerNav = [
   {
     display: "TV Series",
     path: "/tv",
+  },
+  {
+    display: "logout",
+    path: "/",
   },
 ];
 
