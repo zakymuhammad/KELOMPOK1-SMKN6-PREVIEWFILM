@@ -11,9 +11,6 @@ import MovieList from "../components/movie-list/MovieList";
 
 import { category, movieType, tvType } from "../api/tmbdApi";
 
-import Header from "../components/header/Header";
-import Footer from "../components/footer/Footer";
-
 const Home = () => {
   return (
     <>
