@@ -2,6 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "../index.css";
 
+import Header from "../components/header/Header";
+import Footer from "../components/footer/Footer";
+
 import { OutlineButton } from "../components/button/Button";
 import HeroSlide from "../components/hero-slide/HeroSlide";
 import MovieList from "../components/movie-list/MovieList";

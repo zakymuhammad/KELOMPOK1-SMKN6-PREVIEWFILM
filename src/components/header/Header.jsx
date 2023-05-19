@@ -22,7 +22,7 @@ const headerNav = [
     path: "/tv",
   },
   {
-    display: "logout",
+    display: "Login",
     path: "/",
   },
 ];
