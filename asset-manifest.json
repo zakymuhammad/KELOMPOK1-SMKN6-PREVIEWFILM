@@ -1,22 +1,23 @@
 {
   "files": {
-    "main.css": "/static/css/main.fabbef36.css",
-    "main.js": "/static/js/main.42706149.js",
-    "static/js/787.e253fc0a.chunk.js": "/static/js/787.e253fc0a.chunk.js",
-    "static/media/boxicons.svg": "/static/media/boxicons.c17adb11d64fadd1cd5a.svg",
-    "static/media/footer-bg.jpg": "/static/media/footer-bg.67e95f05e76a8cebf7e2.jpg",
-    "static/media/boxicons.eot": "/static/media/boxicons.092b78589f3f53e60030.eot",
-    "static/media/boxicons.woff": "/static/media/boxicons.0f4528cf3c75a4b361c0.woff",
-    "static/media/boxicons.ttf": "/static/media/boxicons.cbd149c55e2396cb52e7.ttf",
-    "static/media/boxicons.woff2": "/static/media/boxicons.8d765747a5588f36ff61.woff2",
-    "static/media/tmoview.png": "/static/media/tmoview.4245268db390b8f405d8.png",
-    "index.html": "/index.html",
-    "main.fabbef36.css.map": "/static/css/main.fabbef36.css.map",
-    "main.42706149.js.map": "/static/js/main.42706149.js.map",
-    "787.e253fc0a.chunk.js.map": "/static/js/787.e253fc0a.chunk.js.map"
+    "main.css": "/KELOMPOK1-SMKN6-PREVIEWFILM/static/css/main.30f8b75a.css",
+    "main.js": "/KELOMPOK1-SMKN6-PREVIEWFILM/static/js/main.b6bd6ad8.js",
+    "static/js/787.e253fc0a.chunk.js": "/KELOMPOK1-SMKN6-PREVIEWFILM/static/js/787.e253fc0a.chunk.js",
+    "static/media/boxicons.svg": "/KELOMPOK1-SMKN6-PREVIEWFILM/static/media/boxicons.c17adb11d64fadd1cd5a.svg",
+    "static/media/footer-bg.jpg": "/KELOMPOK1-SMKN6-PREVIEWFILM/static/media/footer-bg.67e95f05e76a8cebf7e2.jpg",
+    "static/media/boxicons.eot": "/KELOMPOK1-SMKN6-PREVIEWFILM/static/media/boxicons.092b78589f3f53e60030.eot",
+    "static/media/boxicons.woff": "/KELOMPOK1-SMKN6-PREVIEWFILM/static/media/boxicons.0f4528cf3c75a4b361c0.woff",
+    "static/media/boxicons.ttf": "/KELOMPOK1-SMKN6-PREVIEWFILM/static/media/boxicons.cbd149c55e2396cb52e7.ttf",
+    "static/media/boxicons.woff2": "/KELOMPOK1-SMKN6-PREVIEWFILM/static/media/boxicons.8d765747a5588f36ff61.woff2",
+    "static/media/bgimage1.png": "/KELOMPOK1-SMKN6-PREVIEWFILM/static/media/bgimage1.67e1ae1a2981932bcaf5.png",
+    "static/media/tmoview.png": "/KELOMPOK1-SMKN6-PREVIEWFILM/static/media/tmoview.4245268db390b8f405d8.png",
+    "index.html": "/KELOMPOK1-SMKN6-PREVIEWFILM/index.html",
+    "main.30f8b75a.css.map": "/KELOMPOK1-SMKN6-PREVIEWFILM/static/css/main.30f8b75a.css.map",
+    "main.b6bd6ad8.js.map": "/KELOMPOK1-SMKN6-PREVIEWFILM/static/js/main.b6bd6ad8.js.map",
+    "787.e253fc0a.chunk.js.map": "/KELOMPOK1-SMKN6-PREVIEWFILM/static/js/787.e253fc0a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.fabbef36.css",
-    "static/js/main.42706149.js"
+    "static/css/main.30f8b75a.css",
+    "static/js/main.b6bd6ad8.js"
   ]
 }
