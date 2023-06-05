@@ -1,8 +1,8 @@
 {
+  "homepage": "http://zakymuhammad.github.io/KELOMPOK1-SMKN6-PREVIEWFILM",
   "name": "movie",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://zakymuhammad.github.io",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
@@ -23,8 +23,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "predeploy" : "npm run build",
-    "deploy" : "gh-pages -d build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -46,7 +46,6 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^5.0.0",
     "tailwindcss": "^3.3.1"
   }
 }
