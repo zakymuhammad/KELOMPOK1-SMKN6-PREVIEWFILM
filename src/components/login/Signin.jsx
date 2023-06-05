@@ -19,7 +19,7 @@ const Signin = () => {
               id="email"
               required
               placeholder="Username"
-              className="w-full p-2.5 rounded-md"
+              className="w-full p-2.5 rounded-md bg-transparent ring-1 ring-blue-600"
             />
           </div>
 
@@ -29,7 +29,7 @@ const Signin = () => {
               id="email"
               required
               placeholder="Password"
-              className="w-full p-2.5 rounded-md"
+              className="w-full p-2.5 rounded-md bg-transparent ring-1 ring-blue-600"
             />
           </div>
 

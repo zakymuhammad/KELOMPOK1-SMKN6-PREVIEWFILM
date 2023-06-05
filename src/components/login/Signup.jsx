@@ -18,7 +18,7 @@ const Signup = () => {
               type="text"
               id="name"
               placeholder="Username"
-              className="w-full p-2.5 rounded-md"
+              className="w-full p-2.5 rounded-md bg-transparent ring-1 ring-blue-600"
             />
           </div>
 
@@ -27,7 +27,7 @@ const Signup = () => {
               type="email"
               id="email"
               placeholder="Email"
-              className="w-full p-2.5 rounded-md"
+              className="w-full p-2.5 rounded-md bg-transparent ring-1 ring-blue-600"
             />
           </div>
 
@@ -37,7 +37,7 @@ const Signup = () => {
               id="email"
               placeholder="Phone number"
               min={0}
-              className="w-full p-2.5 rounded-md active:appearance-none"
+              className="w-full p-2.5 rounded-md active:appearance-none bg-transparent ring-1 ring-blue-600"
             />
           </div>
 
@@ -46,7 +46,7 @@ const Signup = () => {
               type="password"
               id="email"
               placeholder="Password"
-              className="w-full p-2.5 rounded-md"
+              className="w-full p-2.5 rounded-md bg-transparent ring-1 ring-blue-600"
             />
           </div>
 
@@ -54,7 +54,7 @@ const Signup = () => {
             <textarea
               name="text"
               id="textarea"
-              className="w-full h-20 resize-none p-2.5 rounded-md"
+              className="w-full h-20 resize-none p-2.5 rounded-md bg-transparent ring-1 ring-blue-600"
               cols="auto"
               placeholder="Address"
               rows="5"
