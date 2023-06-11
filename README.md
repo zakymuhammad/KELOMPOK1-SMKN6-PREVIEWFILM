@@ -1,3 +1,7 @@
+# sample from Movie Preview Website
+
+https://zakymuhammad.github.io/KELOMPOK1-SMKN6-PREVIEWFILM/
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
