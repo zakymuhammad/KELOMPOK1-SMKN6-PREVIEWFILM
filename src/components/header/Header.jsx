@@ -1,9 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 
 import { Link, useLocation } from "react-router-dom";
 
 import "./header.scss";
 import "../../index.css";
+
+import { FcAssistant } from "react-icons/fc";
 
 import logo from "../../assets/tmoview.png";
 import { useRef } from "react";
@@ -11,7 +13,7 @@ import { useRef } from "react";
 const headerNav = [
   {
     display: "Home",
-    path: "/home",
+    path: "/",
   },
   {
     display: "Movies",
@@ -22,8 +24,9 @@ const headerNav = [
     path: "/tv",
   },
   {
-    display: "logout",
-    path: "/",
+    display: "-<>^<>-",
+    path: "/signin",
+    icon: <FcAssistant />,
   },
 ];
 
@@ -55,7 +58,7 @@ const Header = () => {
       <div className="header__wrap container">
         <div className="logo">
           <img src={logo} alt="" />
-          <Link to="/home">Mov.プレビュー</Link>
+          <Link to="/home">Movie Preview</Link>
         </div>
         <ul className="header__nav">
           {headerNav.map((e, i) => (

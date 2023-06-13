@@ -1,6 +1,7 @@
 @use "./scss/" as *;
 
-@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap");
+// @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap");
+@import url('https://fonts.cdnfonts.com/css/monaco');
 
 * {
   padding: 0;
@@ -8,7 +9,7 @@
   box-sizing: border-box;
   -webkit-tap-highlight-color: transparent;
 }
- 
+
 html {
   font-size: 100%;
 
