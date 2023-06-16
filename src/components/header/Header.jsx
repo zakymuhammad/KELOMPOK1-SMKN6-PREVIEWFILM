@@ -5,7 +5,7 @@ import { Link, useLocation } from "react-router-dom";
 import "./header.scss";
 import "../../index.css";
 
-import { FcAssistant } from "react-icons/fc";
+import { FcAutomatic } from "react-icons/fc";
 
 import logo from "../../assets/tmoview.png";
 import { useRef } from "react";
@@ -24,9 +24,9 @@ const headerNav = [
     path: "/tv",
   },
   {
-    display: "-<>^<>-",
+    // display: "-<>^<>-",
     path: "/signin",
-    icon: <FcAssistant />,
+    icon: <FcAutomatic />,
   },
 ];
 
@@ -64,6 +64,9 @@ const Header = () => {
           {headerNav.map((e, i) => (
             <li key={i} className={`${i === active ? "active" : ""}`}>
               <Link to={e.path}>{e.display}</Link>
+              <Link className="" to={e.path}>
+                {e.icon}
+              </Link>
             </li>
           ))}
         </ul>
