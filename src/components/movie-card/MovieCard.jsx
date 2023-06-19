@@ -9,6 +9,8 @@ import Button from "../button/Button";
 
 import { category } from "../../api/tmbdApi";
 import apiConfig from "../../api/apiConfig";
+// import PlayIcon from "../../assets/play.png";
+// import { TbTriangleFilled } from "react-icons/tb";
 
 const MovieCard = (props) => {
   const item = props.item;

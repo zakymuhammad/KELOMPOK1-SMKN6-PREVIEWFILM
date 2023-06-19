@@ -1,9 +1,9 @@
 import React from "react";
 import "./style.css";
-import { useHistory } from "react-router-dom";
+import { useHistory, useNavigate } from "react-router-dom";
 
 const Signin = () => {
-  const navigate = useHistory();
+  const navigate = useNavigate();
 
   return (
     <div className="hero h-screen w-full flex justify-center items-center">
@@ -34,7 +34,7 @@ const Signin = () => {
           </div>
 
           <button
-            onClick={() => navigate.push("/admin")}
+            onClick={() => navigate("/admin")}
             className="text-white py-2.5 px-10 rounded-md bg-sky-700 hover:bg-sky-500 hover:ring-2 hover:ring-bg-sky-200 hover:text-slate-800 hover:font-bold"
           >
             Submit
