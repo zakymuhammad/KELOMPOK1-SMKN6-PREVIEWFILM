@@ -12,7 +12,7 @@ import apiConfig from "../../api/apiConfig";
 import "../../index.css";
 
 import "./hero-slide.scss";
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const HeroSlide = () => {
   SwiperCore.use([Autoplay]);
@@ -43,7 +43,7 @@ const HeroSlide = () => {
         grabCursor={true}
         spaceBetween={0}
         slidesPerView={1}
-        // autoplay={{ delay: 5000 }}
+        autoplay={{ delay: 5000 }}
       >
         {movieItems.map((item, i) => (
           <SwiperSlide key={i}>
@@ -69,7 +69,7 @@ const HeroSlide = () => {
 };
 
 const HeroSlideItem = (props) => {
-  let history = useHistory();
+  let history = useNavigate();
 
   const item = props.item;
 
@@ -104,7 +104,7 @@ const HeroSlideItem = (props) => {
           <h2 className="title">{item.title}</h2>
           <div className="overview">{item.overview}</div>
           <div className="btns">
-            <Button onClick={() => history.push("/movie/" + item.id)}>
+            <Button onClick={() => history("/movie/" + item.id)}>
               Show Detail
             </Button>
             <OutlineButton onClick={setModalActive}>

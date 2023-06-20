@@ -5,12 +5,12 @@ import "../../index.css";
 import "./movie-list.scss";
 
 import { SwiperSlide, Swiper } from "swiper/react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
-import Button from "../button/Button";
+// import Button from "../button/Button";
 
 import tmdbApi, { category } from "../../api/tmbdApi";
-import apiConfig from "../../api/apiConfig";
+// import apiConfig from "../../api/apiConfig";
 
 import MovieCard from "../movie-card/MovieCard";
 

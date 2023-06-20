@@ -1,16 +1,16 @@
 import React from "react";
 import "./style.css";
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Signin = () => {
-  const navigate = useHistory();
+  const navigate = useNavigate();
 
   return (
     <div className="hero h-screen w-full flex justify-center items-center">
       <div className="card-form w-[450px] h-auto">
         <form action="" className="p-10">
           <h1 className="font-semibold text-4xl flex justify-center mb-10 text-white">
-            SignIn
+            Login
           </h1>
 
           <div className="mb-5">
@@ -34,13 +34,13 @@ const Signin = () => {
           </div>
 
           <button
-            onClick={() => navigate.push("/home")}
+            onClick={() => navigate("/admin")}
             className="text-white py-2.5 px-10 rounded-md bg-sky-700 hover:bg-sky-500 hover:ring-2 hover:ring-bg-sky-200 hover:text-slate-800 hover:font-bold"
           >
-            submit
+            Submit
           </button>
 
-          <div className="text-white">
+          {/* <div className="text-white">
             <span>
               create new account,{" "}
               <button
@@ -51,7 +51,7 @@ const Signin = () => {
                 SignUp
               </button>
             </span>
-          </div>
+          </div> */}
         </form>
       </div>
     </div>
