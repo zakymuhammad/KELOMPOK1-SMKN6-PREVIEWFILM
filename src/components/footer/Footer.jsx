@@ -20,7 +20,7 @@ const Footer = () => {
         <div className="footer__content__menus">
           <div className="footer__content__menu">
             <Link to="/">Home</Link>
-            <Link to="/">Contact</Link>
+            <Link to="/contact">Contact</Link>
             <Link to="/">Term of services</Link>
             <Link to="/">About us</Link>
           </div>

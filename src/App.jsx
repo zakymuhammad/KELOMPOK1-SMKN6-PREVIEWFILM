@@ -10,6 +10,7 @@ import Singin from "../src/components/login/Signin";
 import Catalog from "../src/pages/Catalog";
 import Detail from "../src/pages/detail/Detail";
 import Admin from "../src/pages/Admin";
+import Contact from "./pages/Contact";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
       <Route path="/:category/search/:keyword" element={<Catalog />} />
       <Route path="/:category/:id" element={<Detail />} />
       <Route path="/:category" element={<Catalog />} />
+      <Route path="/contact" element={<Contact />} />
     </Routes>
   );
 }
