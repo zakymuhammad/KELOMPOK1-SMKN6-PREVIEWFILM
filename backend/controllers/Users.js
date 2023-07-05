@@ -39,7 +39,8 @@ export const Login = async (req, res) => {
   try {
     const user = await Users.findAll({
       where: {
-        email: req.body.email,
+        // email: req.body.email,
+        name: req.body.name,
       },
     });
     const match = await bcrypt.compare(req.body.password, user[0].password);
@@ -49,6 +50,7 @@ export const Login = async (req, res) => {
     const email = user[0].email;
     const accessToken = jwt.sign(
       { userId, name, email },
+      // eslint-disable-next-line no-undef
       process.env.ACCESS_TOKEN_SECRET,
       {
         expiresIn: "20s",
@@ -56,6 +58,7 @@ export const Login = async (req, res) => {
     );
     const refreshToken = jwt.sign(
       { userId, name, email },
+      // eslint-disable-next-line no-undef
       process.env.REFRESH_TOKEN_SECRET,
       {
         expiresIn: "1d",
@@ -77,6 +80,28 @@ export const Login = async (req, res) => {
 
     res.json({ accessToken });
   } catch (error) {
-    res.status(404).json({ msg: "Maaf email anda tidak ditemukan 🤔" });
+    res.status(404).json({ msg: "Maaf username anda tidak ditemukan 🤔" });
   }
+};
+
+export const Logout = async (req, res) => {
+  const refreshToken = req.cookies.refreshToken;
+  if (!refreshToken) return res.sendStatus(204);
+  const user = await Users.findAll({
+    where: {
+      refresh_token: refreshToken,
+    },
+  });
+  if (!user[0]) return res.sendStatus(204);
+  const userId = user[0].id;
+  await Users.update(
+    { refresh_token: null },
+    {
+      where: {
+        id: userId,
+      },
+    }
+  );
+  res.clearCookie("refreshToken");
+  return res.sendStatus(200);
 };

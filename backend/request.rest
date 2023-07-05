@@ -1,5 +1,5 @@
 GET http://localhost:7000/users
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjMsIm5hbWUiOiJBcnpha3kgTXVoIiwiZW1haWwiOiJ6YWt5QGdtYWlsLmNvbSIsImlhdCI6MTY4ODA1ODUwMiwiZXhwIjoxNjg4MDU4NTIyfQ.xb9PyyW2PgX5SVeQ9b6PmHPQGxM6podHROzNk8Z7oS8
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsIm5hbWUiOiJBcnpha3kgTXVoIiwiZW1haWwiOiJ6YWt5QGdtYWlsLmNvbSIsImlhdCI6MTY4ODM2NTU2NSwiZXhwIjoxNjg4MzY1NTgwfQ.6ljPTIUOKzVr1tVqIC55dAJtGG-8-u6gxZuG_N9pkmw
 ###
 POST http://localhost:7000/users
 Content-Type: application/json
@@ -16,8 +16,14 @@ POST http://localhost:7000/login
 Content-Type: application/json
 
 {
-    "email": "zaky@gmail.com",
+    # "email": "zaky@gmail.com",
+    "name": "Arzaky Muh",
     "password": "123123"
 }
 
+###
+GET http://localhost:7000/token
+
+### 
+DELETE http://localhost:7000/logout
 

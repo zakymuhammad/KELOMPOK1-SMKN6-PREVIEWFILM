@@ -1,12 +1,15 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "../../index.css";
+import { useNavigate } from "react-router-dom";
+import jwt_decode from "jwt-decode";
 
 import { LuFileInput } from "react-icons/lu";
 import { MdOutlineSpaceDashboard } from "react-icons/md";
 import { GrSettingsOption } from "react-icons/gr";
 
-import Logo from "../../assets/tmoview.png";
+import logo from "../../assets/tmoview.png";
 import { NavLink } from "react-router-dom";
+import axios from "axios";
 
 const Slidebar = ({ children }) => {
   const menuItem = [
@@ -22,12 +25,29 @@ const Slidebar = ({ children }) => {
     { name: "Setting", icon: <GrSettingsOption /> },
   ];
 
+  const [name, setName] = useState("");
+  const [token, setToken] = useState("");
+
+  useEffect(() => {
+    refreshToken();
+  }, []);
+
+  const refreshToken = async () => {
+    try {
+      const response = await axios.get("http://localhost:7000/token");
+      setToken(response.data.accessToken);
+      const decoded = jwt_decode(response.data.accessToken);
+      // console.log(decoded);
+      setName(decoded.name);
+    } catch (error) {}
+  };
+
   return (
     <div className="flex bg-slate-100 text-slate-800">
-      <div className="h-screen border-r border-gray-400 w-auto px-9 pt-10 text-black">
-        <div className="flex justify-center items-center">
-          <img src={Logo} alt="logo" className="w-9 h-9" />
-          {/* <div className="font-bold text-xl">Movie Admin</div> */}
+      <div className="w-auto h-screen pt-10 text-black border-r border-gray-400 px-9">
+        <div className="flex items-center justify-center">
+          <img src={logo} alt="logo" className="w-9 h-9" />
+          {/* <div className="text-xl font-bold">Movie Admin</div> */}
         </div>
         <div className="">
           <ul>
@@ -37,10 +57,10 @@ const Slidebar = ({ children }) => {
                 <NavLink
                   to={item.path}
                   key={index}
-                  className="link mb-5 flex"
+                  className="flex mb-5 link"
                   activeclassName="active"
                 >
-                  <div className="icon mr-2 w-5 h-5">{item.icon}</div>
+                  <div className="w-5 h-5 mr-2 icon">{item.icon}</div>
                   <div className="link_text">{item.name}</div>
                 </NavLink>
               );
