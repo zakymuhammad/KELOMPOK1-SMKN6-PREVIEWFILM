@@ -10,10 +10,10 @@ import logo from "../../assets/tmoview.png";
 const Footer = () => {
   return (
     <div className="footer" style={{ backgroundImage: `url(${bg})` }}>
-      <div className="footer__content container">
+      <div className="container footer__content">
         <div className="footer__content__logo">
           <div className="logo">
-            <img src={logo} alt="" />
+            <img src={logo} className="image" alt="" />
             <Link to="/">Mov.プレビュー</Link>
           </div>
         </div>

@@ -57,7 +57,7 @@ const Signin = () => {
               placeholder="Username"
               value={name}
               onChange={(e) => setName(e.target.value)}
-              className="w-full p-2.5 rounded-md bg-transparent ring-1 ring-blue-600"
+              className="w-full p-2.5 rounded-md bg-transparent ring-1 ring-blue-600 text-white"
             />
           </div>
 
@@ -69,7 +69,7 @@ const Signin = () => {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               placeholder="Password"
-              className="w-full p-2.5 rounded-md bg-transparent ring-1 ring-blue-600"
+              className="w-full p-2.5 rounded-md bg-transparent ring-1 ring-blue-600 text-white"
             />
           </div>
 

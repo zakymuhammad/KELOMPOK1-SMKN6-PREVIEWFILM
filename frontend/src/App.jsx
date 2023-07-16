@@ -25,7 +25,7 @@ function App() {
       <Route path="/:category/:id" element={<Detail />} />
       <Route path="/:category" element={<Catalog />} />
       <Route path="/contact" element={<Contact />} />
-      <Route path="/admin" element={<Admin />} />
+      <Route path="/add-admin" element={<Admin />} />
       <Route path="/dashboard" element={<Dashboard />} />
       <Route path="/add-movie" element={<AddMovie />} />
     </Routes>

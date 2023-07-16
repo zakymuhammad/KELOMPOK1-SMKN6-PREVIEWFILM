@@ -1,4 +1,5 @@
 import React from "react";
+import "./admin.css";
 
 import Sidebar from "../../components/sidebar/Sidebar";
 
