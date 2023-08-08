@@ -5,6 +5,8 @@ import jwt_decode from "jwt-decode";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
+import Button from "@mui/material/Button";
+
 import "./admin.css";
 
 import Sidebar from "../../components/sidebar/Sidebar";
@@ -37,6 +39,7 @@ const Dashboard = () => {
           sequi consequatur eum mollitia, sunt minus similique quam dignissimos
           delectus? Est.
         </div>
+        <Button variant="contained">ok</Button>
       </div>
     </Sidebar>
   );

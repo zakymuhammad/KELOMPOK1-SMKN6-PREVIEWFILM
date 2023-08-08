@@ -12,7 +12,9 @@ const app = express();
 try {
   await db.authenticate();
   console.log("Your db is Connected... 👌");
+  // penting
   // await db.sync();
+  // penting
 } catch (error) {
   console.error(error);
 }
